@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="ViewCellTest.TestItemView">
+    <ContentView.Content>
+        <StackLayout>
+            <Label x:Name="ProductShortNameLabel" FontAttributes="None" Text="{Binding ProductShortName}" />
+            <Label x:Name="ProductShortSummeryLabel" FontAttributes="Italic" Text="{Binding ProductShortSummary}" />
+            <Label x:Name="ProductShortPriceLabel" FontAttributes="Bold" Text="{Binding ProductShortPrice}" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

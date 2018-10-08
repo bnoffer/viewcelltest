@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="Com.Example.CollapsableCell.CollapsableCell"
+          Appearing="OnAppearing">
+    <Frame x:Name="CollapsableFrame" CornerRadius="5" HasShadow="true" Margin="5" BorderColor="Gray" OutlineColor="Gray">
+        <Grid>
+            <!--<Label x:Name="ExpandedCloseLabel" Text="X" HorizontalTextAlignment="End" />-->
+            <Grid x:Name="CollapsableContent" />
+        </Grid>
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnTapped" />
+        </Frame.GestureRecognizers>
+    </Frame>
+</ViewCell>

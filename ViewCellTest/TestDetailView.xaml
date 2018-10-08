@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewCellTest.TestDetailView"
+             BackgroundColor="Olive">
+    <ContentView.Content>
+        <StackLayout>
+            <Label x:Name="ProductNameLabel" FontAttributes="None" Text="{Binding ProductName}" />
+            <Label x:Name="ProductSummeryLabel" FontAttributes="Italic" Text="{Binding ProductSummary}" />
+            <Label x:Name="ProductDescriptionLabel" FontAttributes="Italic" Text="{Binding ProductDescription}" />
+            <Label x:Name="ProductPriceLabel" FontAttributes="Bold" Text="{Binding ProductPrice}" />
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

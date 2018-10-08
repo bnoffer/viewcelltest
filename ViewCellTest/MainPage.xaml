@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ViewCellTest"
+             xmlns:cell="clr-namespace:Com.Example.CollapsableCell;assembly=CollapsableCell"
+             x:Class="ViewCellTest.MainPage" Appearing="Handle_Appearing">
+    <ContentPage.BindingContext>
+        <local:MainPageVM />
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <ListView x:Name="TestListView"
+                  SeparatorVisibility="None"
+                  HasUnevenRows="true"
+                  SelectionMode="None"
+                  ItemsSource="{ Binding ListData }">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <cell:CollapsableCell>
+                        <cell:CollapsableCell.CollapsedView>
+                            <local:TestItemView />
+                        </cell:CollapsableCell.CollapsedView>
+                        <cell:CollapsableCell.ExpandedView>
+                            <local:TestDetailView />
+                        </cell:CollapsableCell.ExpandedView>
+                    </cell:CollapsableCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
